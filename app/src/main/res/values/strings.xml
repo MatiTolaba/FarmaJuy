@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">FarmaJuy</string>
+    <string name="btn_omitir">Omitir</string>
+
+    <string name="button_sifarmacia">Sitios de Farmacias</string>
+    <string name="button_busq_prod">Busqueda de Producto</string>
+    <string name="button_miubicacion">Mi Ubicación</string>
+    <string name="imagegooglemaps">Imagen de Google Maps</string>
+    <string name="imageninicio1">Imagen del Logo</string>
 </resources>
