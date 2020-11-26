@@ -40,6 +40,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
+            android:onClick="Sitios"
             android:text="@string/button_sifarmacia"
             app:backgroundTint="@color/purple_700" />
 
@@ -56,6 +57,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
+            android:onClick="Ubicacion"
             android:text="@string/button_miubicacion"
             app:backgroundTint="@android:color/holo_purple" />
     </LinearLayout>

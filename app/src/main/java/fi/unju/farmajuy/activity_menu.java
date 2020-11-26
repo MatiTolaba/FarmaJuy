@@ -2,7 +2,9 @@ package fi.unju.farmajuy;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 public class activity_menu extends AppCompatActivity {
 
@@ -17,18 +19,18 @@ public class activity_menu extends AppCompatActivity {
     }
 
 
-    //public void Sitios(View view){
-    //    Intent intent = new Intent(getApplicationContext(), MapsActivitySitios.class);
-    //    startActivity(intent);
-    //}
+    public void Sitios(View view){
+        Intent intent = new Intent(getApplicationContext(), activity_maps_sitios.class);
+        startActivity(intent);
+    }
 
     //public void TiposMapas(View view){
     //    Intent intent = new Intent(getApplicationContext(), MapsActivity2_Tipos.class);
     //    startActivity(intent);
     //}
 
-    //public void Ubicacion(View view){
-    //    Intent intent = new Intent(getApplicationContext(), MapsActivity3Ubicacion.class);
-    //    startActivity(intent);
-    //}
+    public void Ubicacion(View view){
+        Intent intent = new Intent(getApplicationContext(), activity_maps_mi_ubicacion.class);
+        startActivity(intent);
+    }
 }
