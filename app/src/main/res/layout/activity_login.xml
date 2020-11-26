@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="16dp"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp"
-    android:paddingTop="16dp"
     android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".activity_login">
 
@@ -24,10 +24,10 @@
             android:id="@+id/img_telefono"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/img_correo"
-            android:layout_column="0"
-            android:layout_gravity="center_vertical"
             android:layout_row="2"
+            android:layout_column="0"
+            android:layout_below="@+id/img_correo"
+            android:layout_gravity="center_vertical"
             android:src="@drawable/ic_correo" />
 
         <com.google.android.material.textfield.TextInputLayout
@@ -39,13 +39,12 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/campo_correo"
-                android:ems="10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:ems="10"
                 android:hint="Email"
-                android:singleLine="true"
                 android:inputType="textEmailAddress"
-                />
+                android:singleLine="true" />
         </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
 
@@ -77,15 +76,15 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/campo_contraseña"
-                android:ems="10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:ems="10"
                 android:hint="Contraseña"
-                android:singleLine="true"
                 android:inputType="textPassword"
-                />
+                android:singleLine="true" />
         </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
+
 
     <!-- Bottom Bar -->
     <LinearLayout
@@ -102,10 +101,10 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:backgroundTint="@color/cardview_light_background"
+            android:backgroundTint="@color/cardview_dark_background"
             android:onClick="Omitir"
             android:text="OMITIR"
-            android:textColor="@android:color/black" />
+            android:textColor="@color/colorAccent" />
 
         <Button
             android:id="@+id/boton_aceptar"
@@ -114,8 +113,48 @@
             android:layout_weight="1"
             android:backgroundTint="@color/colorAccent"
             android:text="Aceptar"
-            android:textColor="@android:color/white"
-            />
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/txt_registrar"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp" />
+
+    <!-- Bottom Bar -->
+    <LinearLayout
+        android:id="@+id/bottom_bar_reg"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/boton_farmacia"
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/design_default_color_primary_dark"
+
+            android:onClick="RegistroFarmacia"
+            android:text="Farmacia"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/boton_user"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/design_default_color_secondary"
+            android:onClick="RegistroCliente"
+            android:text="Cliente"
+            android:textColor="@android:color/white" />
     </LinearLayout>
 
 </LinearLayout>
