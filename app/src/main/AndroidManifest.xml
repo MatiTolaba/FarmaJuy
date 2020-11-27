@@ -16,7 +16,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FarmaJuy">
-        <activity android:name=".activity_reg_farmacia"></activity>
+        <activity android:name=".MedicamentoBusquedaActivity"></activity>
+        <activity android:name=".DetalleMedicamentoActivity" />
+        <activity android:name=".MainBusquedaActivity" />
+        <activity android:name=".MedicamentoActivity" />
+        <activity android:name=".activity_ingreso_medicamento" />
+        <activity android:name=".activity_reg_farmacia" />
         <activity android:name=".activity_reg_cliente" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
