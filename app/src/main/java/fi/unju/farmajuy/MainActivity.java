@@ -3,8 +3,13 @@ package fi.unju.farmajuy;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.os.Handler;
+import android.widget.Toast;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -32,4 +37,6 @@ public class MainActivity extends AppCompatActivity {
             }
         },duracion_splash);
     }
+
+
 }

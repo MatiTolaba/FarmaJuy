@@ -24,13 +24,15 @@ public class activity_menu extends AppCompatActivity {
         startActivity(intent);
     }
 
-    //public void TiposMapas(View view){
-    //    Intent intent = new Intent(getApplicationContext(), MapsActivity2_Tipos.class);
-    //    startActivity(intent);
-    //}
+
 
     public void Ubicacion(View view){
         Intent intent = new Intent(getApplicationContext(), activity_maps_mi_ubicacion.class);
+        startActivity(intent);
+    }
+
+    public void Busqueda(View view){
+        Intent intent = new Intent(getApplicationContext(), activity_ingreso_medicamento.class);
         startActivity(intent);
     }
 }

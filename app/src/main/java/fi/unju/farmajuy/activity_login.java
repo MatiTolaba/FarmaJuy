@@ -24,4 +24,15 @@ public class activity_login extends AppCompatActivity {
         Intent intent = new Intent(activity_login.this, activity_menu.class);
         startActivity(intent);
     }
+
+    public void RegistroCliente(View view){
+        Intent intent = new Intent(activity_login.this, activity_reg_cliente.class);
+        startActivity(intent);
+    }
+
+    public void RegistroFarmacia(View view){
+        Intent intent = new Intent(activity_login.this, activity_reg_farmacia.class);
+        startActivity(intent);
+    }
+
 }
