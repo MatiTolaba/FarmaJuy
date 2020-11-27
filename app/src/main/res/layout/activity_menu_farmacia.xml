@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#000000"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".activity_menu">
+    tools:context=".activity_menu_farmacia">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -52,8 +52,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
-                    android:onClick="Sitios"
-                    android:text="@string/button_sifarmacia"
+                    android:text="@string/button_agregar_producto"
                     app:backgroundTint="@color/purple_700" />
 
                 <Button
@@ -61,8 +60,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
-                    android:onClick="Busqueda"
-                    android:text="@string/button_busq_prod"
+                    android:text="@string/button_modificar_stock"
                     app:backgroundTint="@android:color/holo_orange_dark" />
 
                 <Button

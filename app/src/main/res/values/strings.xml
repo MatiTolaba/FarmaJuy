@@ -9,5 +9,11 @@
     <string name="imageninicio1">Imagen del Logo</string>
     <string name="title_activity_maps_sitios">Map</string>
     <string name="title_activity_maps_mi_ubicacion">Map</string>
+
+    <string name="button_agregar_producto">Agregar producto</string>
+    <string name="button_modificar_stock">Modificar stock</string>
+
+
     <string name="ingrese_medicamento_o_droga">Ingrese Medicamento o Droga</string>
+    <string name="button_buscar">Buscar</string>
 </resources>

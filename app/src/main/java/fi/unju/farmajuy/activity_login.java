@@ -21,6 +21,11 @@ public class activity_login extends AppCompatActivity {
     }
 
     public void Omitir(View view){
+        Intent intent = new Intent(activity_login.this, activity_menu_farmacia.class);
+        startActivity(intent);
+    }
+
+    public void Aceptar(View view){
         Intent intent = new Intent(activity_login.this, activity_menu.class);
         startActivity(intent);
     }

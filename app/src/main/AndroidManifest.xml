@@ -16,7 +16,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FarmaJuy">
-        <activity android:name=".MedicamentoBusquedaActivity"></activity>
+        <activity android:name=".activity_menu_farmacia"></activity>
+        <activity android:name=".MedicamentoBusquedaActivity" />
         <activity android:name=".DetalleMedicamentoActivity" />
         <activity android:name=".MainBusquedaActivity" />
         <activity android:name=".MedicamentoActivity" />
