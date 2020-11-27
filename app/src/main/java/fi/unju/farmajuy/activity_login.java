@@ -4,15 +4,51 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.InputType;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
+
 
 public class activity_login extends AppCompatActivity {
+
+
+    private RadioGroup radioGroup;
+    private RadioButton rb1, rb2;
+
+    private TextInputLayout tilCorreo;
+    private EditText edt1;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        rb1 = (RadioButton)findViewById(R.id.rb_cliente);
+        rb2 = (RadioButton)findViewById(R.id.rb_farmacia);
+        tilCorreo = (TextInputLayout) findViewById(R.id.til_correo);
+        edt1 = (TextInputEditText)findViewById((R.id.campo_correo));
+
+        radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
+        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if (rb1.isChecked()==true){
+                    edt1.setInputType(InputType.TYPE_CLASS_TEXT);
+                    tilCorreo.setHint("Email");
+                }
+                if (rb2.isChecked()==true){
+                    edt1.setInputType(InputType.TYPE_CLASS_PHONE);
+                    tilCorreo.setHint("CUIT");
+                }
+            }});
+
+
 
         //Coloco el icono en el actionBar
         getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -20,14 +56,15 @@ public class activity_login extends AppCompatActivity {
 
     }
 
-    public void Omitir(View view){
-        Intent intent = new Intent(activity_login.this, activity_menu_farmacia.class);
-        startActivity(intent);
-    }
-
     public void Aceptar(View view){
-        Intent intent = new Intent(activity_login.this, activity_menu.class);
-        startActivity(intent);
+        if (rb1.isChecked()==true){
+            Intent intent = new Intent(activity_login.this, activity_menu.class);
+            startActivity(intent);
+        }
+        if (rb2.isChecked()==true){
+            Intent intent = new Intent(activity_login.this, activity_menu_farmacia.class);
+            startActivity(intent);
+        }
     }
 
     public void RegistroCliente(View view){
