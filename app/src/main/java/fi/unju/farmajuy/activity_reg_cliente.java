@@ -212,7 +212,7 @@ public class activity_reg_cliente extends AppCompatActivity {
 
         if (a && b && c && d) {
             // OK, se pasa a la siguiente acción
-            Toast.makeText(this, "Se guarda el registro", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Cliente Registrado!", Toast.LENGTH_LONG).show();
         }
 
     }
