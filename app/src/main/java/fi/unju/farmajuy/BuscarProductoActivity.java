@@ -71,7 +71,7 @@ public class BuscarProductoActivity extends AppCompatActivity {
                 producto.setDescripcion(cursor.getString(3));
                 producto.setPresentacion(cursor.getString(4));
                 producto.setFoto((cursor.getString(5)));
-                // TODO: hacer el de categoria id
+                producto.setCategoria_id((cursor.getInt(6)));
 
                 productos.add(producto);
             }
