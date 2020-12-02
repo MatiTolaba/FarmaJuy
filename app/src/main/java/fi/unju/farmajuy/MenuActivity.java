@@ -31,6 +31,13 @@ public class MenuActivity extends AppCompatActivity {
         SQLiteDatabase db = conexion.getWritableDatabase();
         ContentValues valores = new ContentValues();
 
+        valores.put(UtilidadesConexion.CAMPO_CATEGORIA_ID, 1);
+        valores.put(UtilidadesConexion.CAMPO_CATEGORIA_NOMBRE, "Medicamentos");
+
+        db.insert(UtilidadesConexion.TABLA_CATEGORIA, UtilidadesConexion.CAMPO_CATEGORIA_ID, valores);
+
+        valores = new ContentValues();
+
         valores.put(UtilidadesConexion.CAMPO_PRODUCTO_ID, 1);
         valores.put(UtilidadesConexion.CAMPO_PRODUCTO_NOMBRE, "Rivotril");
         valores.put(UtilidadesConexion.CAMPO_PRODUCTO_DROGA, "Clonazepam");
@@ -38,7 +45,7 @@ public class MenuActivity extends AppCompatActivity {
         valores.put(UtilidadesConexion.CAMPO_PRODUCTO_PRESENTACION, "Capsulas de 10 mg");
         //valores.put(UtilidadesConexion.CAMPO_PRODUCTO_FOTO, "https://imgbox.com/ZKCZRars");
         valores.put(UtilidadesConexion.CAMPO_PRODUCTO_FOTO, "https://images2.imgbox.com/80/ce/ZKCZRars_o.jpeg");
-
+        valores.put(UtilidadesConexion.CAMPO_PRODUCTO_CATEGORIA_ID, 1);
 
         Long idResultanteBaseDatos = db.insert(UtilidadesConexion.TABLA_PRODUCTO, UtilidadesConexion.CAMPO_PRODUCTO_ID, valores);
 
