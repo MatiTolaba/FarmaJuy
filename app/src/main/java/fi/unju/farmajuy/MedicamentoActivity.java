@@ -27,8 +27,6 @@ public class MedicamentoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_medicamento);
 
         if (medicamentoActivityBundle != null){
-            //String nombreDroga = medicamentoActivityBundle.getString("droga");
-            //pruebaDroga.setText("La droga es: "+nombreDroga);
 
             medicamentos = (ArrayList<Medicamento>) medicamentoActivityBundle.getSerializable("listaMedicamentos");
 
