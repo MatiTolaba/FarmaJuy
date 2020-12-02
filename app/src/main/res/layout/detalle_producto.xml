@@ -13,7 +13,7 @@
         android:padding="8dp">
 
         <TextView
-            android:id="@+id/tvNombreMedicamento"
+            android:id="@+id/tvNombreProducto"
             android:layout_width="0dp"
             android:layout_height="40dp"
             android:layout_marginTop="24dp"
@@ -29,7 +29,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/tvDrogaMedicamento"
+            android:id="@+id/tvDrogaProducto"
             android:layout_width="0dp"
             android:layout_height="32dp"
             android:layout_marginTop="8dp"
@@ -37,29 +37,29 @@
             android:gravity="center_vertical"
             android:text="TextView"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@+id/tvNombreMedicamento"
-            app:layout_constraintStart_toStartOf="@+id/tvNombreMedicamento"
-            app:layout_constraintTop_toBottomOf="@+id/tvNombreMedicamento" />
+            app:layout_constraintEnd_toEndOf="@+id/tvNombreProducto"
+            app:layout_constraintStart_toStartOf="@+id/tvNombreProducto"
+            app:layout_constraintTop_toBottomOf="@+id/tvNombreProducto" />
 
         <TextView
-            android:id="@+id/tvPresentacionMedicamento"
+            android:id="@+id/tvPresentacionProducto"
             android:layout_width="0dp"
             android:layout_height="32dp"
             android:layout_marginTop="8dp"
             android:gravity="center_vertical"
             android:text="TextView"
-            app:layout_constraintEnd_toEndOf="@+id/tvDrogaMedicamento"
-            app:layout_constraintStart_toStartOf="@+id/tvDrogaMedicamento"
-            app:layout_constraintTop_toBottomOf="@+id/tvDrogaMedicamento" />
+            app:layout_constraintEnd_toEndOf="@+id/tvDrogaProducto"
+            app:layout_constraintStart_toStartOf="@+id/tvDrogaProducto"
+            app:layout_constraintTop_toBottomOf="@+id/tvDrogaProducto" />
 
         <ImageView
-            android:id="@+id/imageViewMedicamento"
+            android:id="@+id/imageViewProducto"
             android:layout_width="200dp"
             android:layout_height="200dp"
             android:layout_marginTop="24dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvPresentacionMedicamento"
+            app:layout_constraintTop_toBottomOf="@+id/tvPresentacionProducto"
             tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
         <Button
@@ -70,10 +70,10 @@
             android:text="Consultar Disponibilidad"
             app:layout_constraintEnd_toStartOf="@+id/guideline4"
             app:layout_constraintStart_toStartOf="@+id/guideline3"
-            app:layout_constraintTop_toBottomOf="@+id/imageViewMedicamento" />
+            app:layout_constraintTop_toBottomOf="@+id/imageViewProducto" />
 
         <TextView
-            android:id="@+id/labelDescripcionMedicamento"
+            android:id="@+id/labelDescripcionProducto"
             android:layout_width="125dp"
             android:layout_height="24dp"
             android:layout_marginTop="16dp"
@@ -83,18 +83,18 @@
             app:layout_constraintTop_toBottomOf="@+id/btnBuscarFarmacias" />
 
         <TextView
-            android:id="@+id/tvDescripcionMedicamento"
+            android:id="@+id/tvDescripcionProducto"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:gravity="center_vertical"
             android:text="TextView"
             app:layout_constraintEnd_toStartOf="@+id/guideline4"
-            app:layout_constraintStart_toStartOf="@+id/labelDescripcionMedicamento"
-            app:layout_constraintTop_toBottomOf="@+id/labelDescripcionMedicamento" />
+            app:layout_constraintStart_toStartOf="@+id/labelDescripcionProducto"
+            app:layout_constraintTop_toBottomOf="@+id/labelDescripcionProducto" />
 
         <TextView
-            android:id="@+id/labelCategoriaMedicamento"
+            android:id="@+id/labelCategoriaProducto"
             android:layout_width="80dp"
             android:layout_height="24dp"
             android:layout_marginTop="8dp"
@@ -103,10 +103,10 @@
             android:text="Categoría:"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/guideline3"
-            app:layout_constraintTop_toBottomOf="@+id/tvDescripcionMedicamento" />
+            app:layout_constraintTop_toBottomOf="@+id/tvDescripcionProducto" />
 
         <TextView
-            android:id="@+id/tvNombreCategoriaMedicamento"
+            android:id="@+id/tvNombreCategoriaProducto"
             android:layout_width="0dp"
             android:layout_height="24dp"
             android:layout_marginStart="8dp"
@@ -117,8 +117,8 @@
             android:text="TextView"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/guideline4"
-            app:layout_constraintStart_toEndOf="@+id/labelCategoriaMedicamento"
-            app:layout_constraintTop_toBottomOf="@+id/tvDescripcionMedicamento" />
+            app:layout_constraintStart_toEndOf="@+id/labelCategoriaProducto"
+            app:layout_constraintTop_toBottomOf="@+id/tvDescripcionProducto" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline3"

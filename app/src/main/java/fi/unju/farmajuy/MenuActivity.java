@@ -32,7 +32,7 @@ public class MenuActivity extends AppCompatActivity {
     }
 
     public void Busqueda(View view){
-        Intent intent = new Intent(getApplicationContext(), IngresoMedicamentoActivity.class);
+        Intent intent = new Intent(getApplicationContext(), BuscarProductoActivity.class);
         startActivity(intent);
     }
 }

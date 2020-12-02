@@ -2,32 +2,32 @@ package fi.unju.farmajuy.entidades;
 
 import java.util.Date;
 
-public class DetalleMedicamento {
-    private Integer detalle_medicamento_id;
+public class DetalleProducto {
+    private Integer detalle_producto_id;
     private Integer farmacia_id;
-    private Integer medicamento_id;
+    private Integer producto_id;
     private Double precio;
     private Date fecha_Vencimiento;
     private Integer stock;
 
-    public DetalleMedicamento() {
+    public DetalleProducto() {
     }
 
-    public DetalleMedicamento(Integer detalle_medicamento_id, Integer farmacia_id, Integer medicamento_id, Double precio, Date fecha_Vencimiento, Integer stock) {
-        this.detalle_medicamento_id = detalle_medicamento_id;
+    public DetalleProducto(Integer detalle_producto_id, Integer farmacia_id, Integer producto_id, Double precio, Date fecha_Vencimiento, Integer stock) {
+        this.detalle_producto_id = detalle_producto_id;
         this.farmacia_id = farmacia_id;
-        this.medicamento_id = medicamento_id;
+        this.producto_id = producto_id;
         this.precio = precio;
         this.fecha_Vencimiento = fecha_Vencimiento;
         this.stock = stock;
     }
 
-    public Integer getDetalle_medicamento_id() {
-        return detalle_medicamento_id;
+    public Integer getDetalle_producto_id() {
+        return detalle_producto_id;
     }
 
-    public void setDetalle_medicamento_id(Integer detalle_medicamento_id) {
-        this.detalle_medicamento_id = detalle_medicamento_id;
+    public void setDetalle_producto_id(Integer detalle_producto_id) {
+        this.detalle_producto_id = detalle_producto_id;
     }
 
     public Integer getFarmacia_id() {
@@ -38,12 +38,12 @@ public class DetalleMedicamento {
         this.farmacia_id = farmacia_id;
     }
 
-    public Integer getMedicamento_id() {
-        return medicamento_id;
+    public Integer getProducto_id() {
+        return producto_id;
     }
 
-    public void setMedicamento_id(Integer medicamento_id) {
-        this.medicamento_id = medicamento_id;
+    public void setProducto_id(Integer producto_id) {
+        this.producto_id = producto_id;
     }
 
     public Double getPrecio() {

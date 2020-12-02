@@ -2,9 +2,9 @@ package fi.unju.farmajuy.entidades;
 
 import java.io.Serializable;
 
-public class Medicamento implements Serializable {
+public class Producto implements Serializable {
 
-    private Integer medicamento_id;
+    private Integer producto_id;
     private String nombre;
     private String droga;
     private String descripcion;
@@ -12,11 +12,11 @@ public class Medicamento implements Serializable {
     private String foto;
     private Integer categoria_id;
 
-    public Medicamento() {
+    public Producto() {
     }
 
-    public Medicamento(Integer medicamento_id, String nombre, String droga, String descripcion, String presentacion, String foto, Integer categoria_id) {
-        this.medicamento_id = medicamento_id;
+    public Producto(Integer producto_id, String nombre, String droga, String descripcion, String presentacion, String foto, Integer categoria_id) {
+        this.producto_id = producto_id;
         this.nombre = nombre;
         this.droga = droga;
         this.descripcion = descripcion;
@@ -25,12 +25,12 @@ public class Medicamento implements Serializable {
         this.categoria_id = categoria_id;
     }
 
-    public Integer getMedicamento_id() {
-        return medicamento_id;
+    public Integer getProducto_id() {
+        return producto_id;
     }
 
-    public void setMedicamento_id(Integer medicamento_id) {
-        this.medicamento_id = medicamento_id;
+    public void setProducto_id(Integer producto_id) {
+        this.producto_id = producto_id;
     }
 
     public String getNombre() {

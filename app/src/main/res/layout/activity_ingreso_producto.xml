@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".IngresoMedicamentoActivity">
+    tools:context=".BuscarProductoActivity">
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout"
@@ -18,16 +18,16 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/inputTextMedicamentoNombreDroga"
+            android:id="@+id/inputTextProductoNombreDroga"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/ingrese_medicamento_o_droga"
+            android:hint="@string/ingrese_nombre_producto_o_droga"
             android:inputType="text"
             />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/btnBuscarMedicamento"
+        android:id="@+id/btnBuscarProducto"
         android:layout_width="227dp"
         android:layout_height="62dp"
         android:layout_marginTop="44dp"

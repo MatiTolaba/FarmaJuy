@@ -17,9 +17,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FarmaJuy">
         <activity android:name=".MenuFarmaciaActivity"></activity>
-        <activity android:name=".DetalleMedicamentoActivity" />
-        <activity android:name=".MedicamentoActivity" />
-        <activity android:name=".IngresoMedicamentoActivity" />
+        <activity android:name=".DetalleProductoActivity" />
+        <activity android:name=".ProductoActivity" />
+        <activity android:name=".BuscarProductoActivity" />
         <activity android:name=".RegistroFarmaciaActivity" />
         <activity android:name=".RegistroClienteActivity" />
         <!--

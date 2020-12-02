@@ -11,21 +11,21 @@ public class UtilidadesConexion {
     public static final String CREAR_TABLA_CATEGORIA = "CREATE TABLE " +TABLA_CATEGORIA+ " (" +
             CAMPO_CATEGORIA_ID+ " INTEGER PRIMARY KEY AUTOINCREMENT, " +CAMPO_CATEGORIA_NOMBRE+ " TEXT ) ";
 
-    //Constantes campos de tabla medicamento
+    //Constantes campos de tabla producto
 
-    public static final String TABLA_MEDICAMENTO = "medicamentos";
-    public static final String CAMPO_MEDICAMENTO_ID = "medicamento_id";
-    public static final String CAMPO_MEDICAMENTO_NOMBRE = "medicamento_nombre";
-    public static final String CAMPO_MEDICAMENTO_DROGA = "medicamento_droga";
-    public static final String CAMPO_MEDICAMENTO_DESCRIPCION = "medicamento_descripcion";
-    public static final String CAMPO_MEDICAMENTO_PRESENTACION = "medicamento_presentacion";
-    public static final String CAMPO_MEDICAMENTO_FOTO = "medicamento_foto";
-    public static final String CAMPO_MEDICAMENTO_CATEGORIA_ID = "categoria_id";
+    public static final String TABLA_PRODUCTO = "productos";
+    public static final String CAMPO_PRODUCTO_ID = "producto_id";
+    public static final String CAMPO_PRODUCTO_NOMBRE = "producto_nombre";
+    public static final String CAMPO_PRODUCTO_DROGA = "producto_droga";
+    public static final String CAMPO_PRODUCTO_DESCRIPCION = "producto_descripcion";
+    public static final String CAMPO_PRODUCTO_PRESENTACION = "producto_presentacion";
+    public static final String CAMPO_PRODUCTO_FOTO = "producto_foto";
+    public static final String CAMPO_PRODUCTO_CATEGORIA_ID = "categoria_id";
 
-    public static final String CREAR_TABLA_MEDICAMENTO = "CREATE TABLE " +TABLA_MEDICAMENTO+ " (" +
-        CAMPO_MEDICAMENTO_ID+ " INTEGER, " +CAMPO_MEDICAMENTO_NOMBRE+ " TEXT, " +
-        CAMPO_MEDICAMENTO_DROGA+" TEXT," +CAMPO_MEDICAMENTO_DESCRIPCION+ " TEXT," +CAMPO_MEDICAMENTO_PRESENTACION+ " TEXT, " +
-        CAMPO_MEDICAMENTO_FOTO+" TEXT, " +CAMPO_MEDICAMENTO_CATEGORIA_ID+ " INTEGER )";
+    public static final String CREAR_TABLA_PRODUCTO = "CREATE TABLE " + TABLA_PRODUCTO + " (" +
+            CAMPO_PRODUCTO_ID + " INTEGER, " + CAMPO_PRODUCTO_NOMBRE + " TEXT, " +
+            CAMPO_PRODUCTO_DROGA +" TEXT," + CAMPO_PRODUCTO_DESCRIPCION + " TEXT," + CAMPO_PRODUCTO_PRESENTACION + " TEXT, " +
+            CAMPO_PRODUCTO_FOTO +" TEXT, " + CAMPO_PRODUCTO_CATEGORIA_ID + " INTEGER )";
 
     //Constantes campos de tabla farmacia
 
@@ -43,18 +43,18 @@ public class UtilidadesConexion {
             CAMPO_FARMACIA_DIRECCION +" TEXT," + CAMPO_FARMACIA_HORARIO + " TEXT," + CAMPO_FARMACIA_TELEFONO +
             " TEXT, " + CAMPO_FARMACIA_UBICACION + " TEXT, " + CAMPO_FARMACIA_FOTO + "TEXT )";
 
-    //Constantes campos de tabla detalle medicamento
+    //Constantes campos de tabla detalle producto
 
-    public static final String TABLA_DETALLE_MEDICAMENTO = "detalles_medicamento";
-    public static final String CAMPO_DETALLE_MEDICAMENTO_ID = "detalle_medicamento_id";
-    public static final String CAMPO_DETALLE_MEDICAMENTO_FARMACIA_ID = "farmacia_id";
-    public static final String CAMPO_DETALLE_MEDICAMENTO_MEDICAMENTO_ID = "medicamento_id";
-    public static final String CAMPO_DETALLE_MEDICAMENTO_PRECIO = "detalle_medicamento_precio";
-    public static final String CAMPO_DETALLE_MEDICAMENTO_FECHA_VENCIMIENTO = "detalle_medicamento_fecha_vencimiento";
-    public static final String CAMPO_DETALLE_MEDICAMENTO_STOCK = "detalle_medicamento_stock";
+    public static final String TABLA_DETALLE_PRODUCTO = "detalles_producto";
+    public static final String CAMPO_DETALLE_PRODUCTO_ID = "detalle_producto_id";
+    public static final String CAMPO_DETALLE_PRODUCTO_FARMACIA_ID = "farmacia_id";
+    public static final String CAMPO_DETALLE_PRODUCTO_PRODUCTO_ID = "producto_id";
+    public static final String CAMPO_DETALLE_PRODUCTO_PRECIO = "detalle_producto_precio";
+    public static final String CAMPO_DETALLE_PRODUCTO_FECHA_VENCIMIENTO = "detalle_producto_fecha_vencimiento";
+    public static final String CAMPO_DETALLE_PRODUCTO_STOCK = "detalle_producto_stock";
 
-    public static final String CREAR_TABLA_DETALLE_MEDICAMENTO = "CREATE TABLE " +TABLA_DETALLE_MEDICAMENTO+ " (" +
-            CAMPO_DETALLE_MEDICAMENTO_ID+ " INTEGER PRIMARY KEY AUTOINCREMENT, " +CAMPO_DETALLE_MEDICAMENTO_FARMACIA_ID+ " INTEGER, " +
-            CAMPO_DETALLE_MEDICAMENTO_MEDICAMENTO_ID+" INTEGER," +CAMPO_DETALLE_MEDICAMENTO_PRECIO+ " DOUBLE," +CAMPO_DETALLE_MEDICAMENTO_FECHA_VENCIMIENTO +
-            " DATE, " + CAMPO_DETALLE_MEDICAMENTO_STOCK+ " INTEGER )";
+    public static final String CREAR_TABLA_DETALLE_PRODUCTO = "CREATE TABLE " + TABLA_DETALLE_PRODUCTO + " (" +
+            CAMPO_DETALLE_PRODUCTO_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + CAMPO_DETALLE_PRODUCTO_FARMACIA_ID + " INTEGER, " +
+            CAMPO_DETALLE_PRODUCTO_PRODUCTO_ID +" INTEGER," + CAMPO_DETALLE_PRODUCTO_PRECIO + " DOUBLE," + CAMPO_DETALLE_PRODUCTO_FECHA_VENCIMIENTO +
+            " DATE, " + CAMPO_DETALLE_PRODUCTO_STOCK + " INTEGER )";
 }
