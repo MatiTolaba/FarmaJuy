@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import fi.unju.farmajuy.entidades.Medicamento;
 import fi.unju.farmajuy.utilidades.UtilidadesConexion;
 
-public class activity_ingreso_medicamento extends AppCompatActivity {
+public class IngresoMedicamentoActivity extends AppCompatActivity {
 
     EditText medicamentoNombreDroga;
 
@@ -61,7 +61,7 @@ public class activity_ingreso_medicamento extends AppCompatActivity {
                 listaMedicamentos = buscarMedicamentos();
 
                 if ( !listaMedicamentos.isEmpty() ){
-                    Intent medicamentoActivityIntent = new Intent(activity_ingreso_medicamento.this,MedicamentoActivity.class);
+                    Intent medicamentoActivityIntent = new Intent(IngresoMedicamentoActivity.this,MedicamentoActivity.class);
                     Bundle medicamentoActivityBundle = new Bundle();
 
                     medicamentoActivityBundle.putSerializable("listaMedicamentos", listaMedicamentos);

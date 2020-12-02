@@ -16,7 +16,7 @@ import com.google.android.material.textfield.TextInputLayout;
 
 import java.util.regex.Pattern;
 
-public class activity_reg_cliente extends AppCompatActivity {
+public class RegistroClienteActivity extends AppCompatActivity {
 
     private TextInputLayout tilNombre;
     private TextInputLayout tilTelefono;

@@ -20,7 +20,7 @@ import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class activity_maps_mi_ubicacion extends FragmentActivity implements OnMapReadyCallback {
+public class MapsMiUbicacionActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
 
@@ -73,7 +73,7 @@ public class activity_maps_mi_ubicacion extends FragmentActivity implements OnMa
         mMap.setMyLocationEnabled(true); //Para acceder a mi ubicacion. Encendemos la ubicacion actual
         mMap.getUiSettings().setMyLocationButtonEnabled(true); //para que aparezca el boton que me lleva a la ubicacion
 
-        LocationManager locationManager = (LocationManager) activity_maps_mi_ubicacion.this.getSystemService(Context.LOCATION_SERVICE); //creamos un objeto locationManager
+        LocationManager locationManager = (LocationManager) MapsMiUbicacionActivity.this.getSystemService(Context.LOCATION_SERVICE); //creamos un objeto locationManager
         LocationListener locationListener = new LocationListener() { //metodo de cambiar la localizacion
             @Override
             public void onLocationChanged(Location location) {

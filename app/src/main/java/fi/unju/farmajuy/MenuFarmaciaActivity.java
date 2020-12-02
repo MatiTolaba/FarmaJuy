@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class activity_menu_farmacia extends AppCompatActivity {
+public class MenuFarmaciaActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +19,7 @@ public class activity_menu_farmacia extends AppCompatActivity {
     }
 
     public void Ubicacion(View view){
-        Intent intent = new Intent(getApplicationContext(), activity_maps_mi_ubicacion.class);
+        Intent intent = new Intent(getApplicationContext(), MapsMiUbicacionActivity.class);
         startActivity(intent);
     }
 }

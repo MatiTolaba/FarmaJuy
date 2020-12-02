@@ -15,7 +15,7 @@ import com.google.android.material.textfield.TextInputLayout;
 
 import java.util.regex.Pattern;
 
-public class activity_reg_farmacia extends AppCompatActivity {
+public class RegistroFarmaciaActivity extends AppCompatActivity {
 
     private TextInputLayout tilCUIT;
     private TextInputLayout tilNombre;

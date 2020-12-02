@@ -16,12 +16,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FarmaJuy">
-        <activity android:name=".activity_menu_farmacia"></activity>
+        <activity android:name=".MenuFarmaciaActivity"></activity>
         <activity android:name=".DetalleMedicamentoActivity" />
         <activity android:name=".MedicamentoActivity" />
-        <activity android:name=".activity_ingreso_medicamento" />
-        <activity android:name=".activity_reg_farmacia" />
-        <activity android:name=".activity_reg_cliente" />
+        <activity android:name=".IngresoMedicamentoActivity" />
+        <activity android:name=".RegistroFarmaciaActivity" />
+        <activity android:name=".RegistroClienteActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -35,13 +35,13 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".activity_maps_mi_ubicacion"
+            android:name=".MapsMiUbicacionActivity"
             android:label="@string/title_activity_maps_mi_ubicacion" />
         <activity
-            android:name=".activity_maps_sitios"
+            android:name=".MapsSitiosActivity"
             android:label="@string/title_activity_maps_sitios" />
-        <activity android:name=".activity_menu" />
-        <activity android:name=".activity_login" />
+        <activity android:name=".MenuActivity" />
+        <activity android:name=".LoginActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -15,7 +14,7 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
 
-public class activity_login extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
 
     private RadioGroup radioGroup;
@@ -58,22 +57,22 @@ public class activity_login extends AppCompatActivity {
 
     public void Aceptar(View view){
         if (rb1.isChecked()==true){
-            Intent intent = new Intent(activity_login.this, activity_menu.class);
+            Intent intent = new Intent(LoginActivity.this, MenuActivity.class);
             startActivity(intent);
         }
         if (rb2.isChecked()==true){
-            Intent intent = new Intent(activity_login.this, activity_menu_farmacia.class);
+            Intent intent = new Intent(LoginActivity.this, MenuFarmaciaActivity.class);
             startActivity(intent);
         }
     }
 
     public void RegistroCliente(View view){
-        Intent intent = new Intent(activity_login.this, activity_reg_cliente.class);
+        Intent intent = new Intent(LoginActivity.this, RegistroClienteActivity.class);
         startActivity(intent);
     }
 
     public void RegistroFarmacia(View view){
-        Intent intent = new Intent(activity_login.this, activity_reg_farmacia.class);
+        Intent intent = new Intent(LoginActivity.this, RegistroFarmaciaActivity.class);
         startActivity(intent);
     }
 
