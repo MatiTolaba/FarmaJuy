@@ -1,17 +1,19 @@
 package fi.unju.farmajuy.entidades;
 
+import android.location.Location;
+
 public class Farmacia {
     private Integer farmacia_id;
     private String nombre;
     private String direccion;
     private String horario;
     private String telefono;
-    private String ubicacion;
+    private Location ubicacion;
 
     public Farmacia() {
     }
 
-    public Farmacia(Integer farmacia_id, String nombre, String direccion, String horario, String telefono, String ubicacion) {
+    public Farmacia(Integer farmacia_id, String nombre, String direccion, String horario, String telefono, Location ubicacion) {
         this.farmacia_id = farmacia_id;
         this.nombre = nombre;
         this.direccion = direccion;
@@ -60,11 +62,11 @@ public class Farmacia {
         this.telefono = telefono;
     }
 
-    public String getUbicacion() {
+    public Location getUbicacion() {
         return ubicacion;
     }
 
-    public void setUbicacion(String ubicacion) {
+    public void setUbicacion(Location ubicacion) {
         this.ubicacion = ubicacion;
     }
 }

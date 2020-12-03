@@ -43,7 +43,6 @@ public class MenuActivity extends AppCompatActivity {
         valores.put(UtilidadesConexion.CAMPO_PRODUCTO_DROGA, "Clonazepam");
         valores.put(UtilidadesConexion.CAMPO_PRODUCTO_DESCRIPCION, "Ansiolítico");
         valores.put(UtilidadesConexion.CAMPO_PRODUCTO_PRESENTACION, "Capsulas de 10 mg");
-        //valores.put(UtilidadesConexion.CAMPO_PRODUCTO_FOTO, "https://imgbox.com/ZKCZRars");
         valores.put(UtilidadesConexion.CAMPO_PRODUCTO_FOTO, "https://images2.imgbox.com/80/ce/ZKCZRars_o.jpeg");
         valores.put(UtilidadesConexion.CAMPO_PRODUCTO_CATEGORIA_ID, 1);
 
