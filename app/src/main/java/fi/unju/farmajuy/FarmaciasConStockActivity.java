@@ -28,7 +28,7 @@ public class FarmaciasConStockActivity extends AppCompatActivity {
 
         if (activityBundle != null){
 
-            farmaciasConStock = (ArrayList<Farmacia>) activityBundle.getSerializable("listaProductos");
+            farmaciasConStock = (ArrayList<Farmacia>) activityBundle.getSerializable("listaFarmaciasConStock");
             //precioProducto = activityBundle.getDouble("precioProducto");
             preciosProducto = (ArrayList<Double>) activityBundle.getSerializable("preciosProducto");
 

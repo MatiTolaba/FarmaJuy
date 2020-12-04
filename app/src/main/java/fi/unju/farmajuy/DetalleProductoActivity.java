@@ -171,6 +171,8 @@ public class DetalleProductoActivity extends AppCompatActivity {
 
                 listaFarmaciasConStock.add(farmacia);
 
+                System.out.println(listaFarmaciasConStock.size());
+
                 precioProducto = cursor.getDouble(6);
 
                 preciosProducto.add(precioProducto);
