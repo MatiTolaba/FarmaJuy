@@ -20,6 +20,7 @@
         <activity android:name=".DetalleProductoActivity" />
         <activity android:name=".ProductoActivity" />
         <activity android:name=".BuscarProductoActivity" />
+        <activity android:name=".FarmaciasConStockActivity"/>
         <activity android:name=".RegistroFarmaciaActivity" />
         <activity android:name=".RegistroClienteActivity" />
         <!--

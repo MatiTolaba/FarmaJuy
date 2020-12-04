@@ -2,7 +2,9 @@ package fi.unju.farmajuy.entidades;
 
 import android.location.Location;
 
-public class Farmacia {
+import java.io.Serializable;
+
+public class Farmacia implements Serializable {
     private Integer farmacia_id;
     private String nombre;
     private String direccion;

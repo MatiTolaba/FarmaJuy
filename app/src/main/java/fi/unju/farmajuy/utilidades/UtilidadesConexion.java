@@ -41,7 +41,7 @@ public class UtilidadesConexion {
     public static final String CREAR_TABLA_FARMACIA = "CREATE TABLE " +TABLA_FARMACIA+  " (" +
             CAMPO_FARMACIA_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +CAMPO_FARMACIA_NOMBRE + " TEXT, " +
             CAMPO_FARMACIA_DIRECCION +" TEXT," + CAMPO_FARMACIA_HORARIO + " TEXT," + CAMPO_FARMACIA_TELEFONO +
-            " TEXT, " + CAMPO_FARMACIA_UBICACION + " TEXT, " + CAMPO_FARMACIA_FOTO + "TEXT )";
+            " TEXT, " + CAMPO_FARMACIA_UBICACION + " TEXT, " + CAMPO_FARMACIA_FOTO + " TEXT )";
 
     //Constantes campos de tabla detalle producto
 

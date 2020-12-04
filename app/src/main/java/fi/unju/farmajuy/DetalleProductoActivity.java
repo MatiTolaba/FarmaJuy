@@ -26,9 +26,10 @@ public class DetalleProductoActivity extends AppCompatActivity {
     ImageView imagenProducto;
 
     ArrayList<Farmacia> listaFarmaciasConStock = new ArrayList<>();
+    ArrayList<Double> preciosProducto = new ArrayList<>();
 
     Producto producto;
-    Double precioProducto;
+    //Double precioProducto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,7 +91,8 @@ public class DetalleProductoActivity extends AppCompatActivity {
                     Bundle activityBundle = new Bundle();
 
                     activityBundle.putSerializable("listaFarmaciasConStock", listaFarmaciasConStock);
-                    activityBundle.putDouble("precioProducto",precioProducto);
+                    //activityBundle.putDouble("precioProducto",precioProducto);
+                    activityBundle.putSerializable("preciosProducto", preciosProducto);
                     activityIntent.putExtras(activityBundle);
 
                     startActivity(activityIntent);
@@ -108,6 +110,7 @@ public class DetalleProductoActivity extends AppCompatActivity {
 
         //DetalleProducto detalleProducto = null;
         Farmacia farmacia = null;
+        Double precioProducto;
         //ArrayList<DetalleProducto> detallesProductos = new ArrayList<>();
         //String parametro = producto.getProducto_id().toString();
 
@@ -130,7 +133,7 @@ public class DetalleProductoActivity extends AppCompatActivity {
 //                detallesProductos.add(detalleProducto);
 //            }
 
-            Cursor cursor = db.rawQuery("SELECT "+ UtilidadesConexion.CAMPO_FARMACIA_ID +
+            Cursor cursor = db.rawQuery("SELECT "+ UtilidadesConexion.TABLA_FARMACIA +"."+UtilidadesConexion.CAMPO_FARMACIA_ID +
                     ", "+ UtilidadesConexion.CAMPO_FARMACIA_NOMBRE+
                     ", "+ UtilidadesConexion.CAMPO_FARMACIA_DIRECCION+
                     ", "+ UtilidadesConexion.CAMPO_FARMACIA_HORARIO+
@@ -169,6 +172,8 @@ public class DetalleProductoActivity extends AppCompatActivity {
                 listaFarmaciasConStock.add(farmacia);
 
                 precioProducto = cursor.getDouble(6);
+
+                preciosProducto.add(precioProducto);
             }
 
         } catch (Exception e) {

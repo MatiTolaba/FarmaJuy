@@ -9,15 +9,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 import fi.unju.farmajuy.adaptadores.AdaptadorDetalleProducto;
-import fi.unju.farmajuy.adaptadores.AdaptadorProducto;
 import fi.unju.farmajuy.entidades.Farmacia;
-import fi.unju.farmajuy.entidades.Producto;
 
 public class FarmaciasConStockActivity extends AppCompatActivity {
 
     RecyclerView recyclerViewFarmacias;
     ArrayList<Farmacia> farmaciasConStock;
-    Double precioProducto;
+    //Double precioProducto;
+    ArrayList<Double> preciosProducto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,12 +29,14 @@ public class FarmaciasConStockActivity extends AppCompatActivity {
         if (activityBundle != null){
 
             farmaciasConStock = (ArrayList<Farmacia>) activityBundle.getSerializable("listaProductos");
-            precioProducto = activityBundle.getDouble("precioProducto");
+            //precioProducto = activityBundle.getDouble("precioProducto");
+            preciosProducto = (ArrayList<Double>) activityBundle.getSerializable("preciosProducto");
 
             recyclerViewFarmacias = (RecyclerView) findViewById(R.id.recyclerViewFarmaciasConStock);
             recyclerViewFarmacias.setLayoutManager( new LinearLayoutManager(this));
 
-            AdaptadorDetalleProducto adaptadorDetalleProducto = new AdaptadorDetalleProducto(this, farmaciasConStock, precioProducto);
+            //AdaptadorDetalleProducto adaptadorDetalleProducto = new AdaptadorDetalleProducto(this, farmaciasConStock, precioProducto);
+            AdaptadorDetalleProducto adaptadorDetalleProducto = new AdaptadorDetalleProducto(this, farmaciasConStock, preciosProducto);
             recyclerViewFarmacias.setAdapter(adaptadorDetalleProducto);
         }
 

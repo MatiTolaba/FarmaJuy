@@ -67,6 +67,7 @@
             android:layout_width="290dp"
             android:layout_height="56dp"
             android:layout_marginTop="24dp"
+            android:onClick="onClick"
             android:text="Consultar Disponibilidad"
             app:layout_constraintEnd_toStartOf="@+id/guideline4"
             app:layout_constraintStart_toStartOf="@+id/guideline3"

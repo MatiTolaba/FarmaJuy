@@ -1,8 +1,9 @@
 package fi.unju.farmajuy.entidades;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class DetalleProducto {
+public class DetalleProducto implements Serializable {
     private Integer detalle_producto_id;
     private Integer farmacia_id;
     private Integer producto_id;
