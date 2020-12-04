@@ -9,17 +9,19 @@ public class Farmacia {
     private String horario;
     private String telefono;
     private Location ubicacion;
+    private String foto;
 
     public Farmacia() {
     }
 
-    public Farmacia(Integer farmacia_id, String nombre, String direccion, String horario, String telefono, Location ubicacion) {
+    public Farmacia(Integer farmacia_id, String nombre, String direccion, String horario, String telefono, Location ubicacion, String foto) {
         this.farmacia_id = farmacia_id;
         this.nombre = nombre;
         this.direccion = direccion;
         this.horario = horario;
         this.telefono = telefono;
         this.ubicacion = ubicacion;
+        this.foto = foto;
     }
 
     public Integer getFarmacia_id() {
@@ -69,4 +71,8 @@ public class Farmacia {
     public void setUbicacion(Location ubicacion) {
         this.ubicacion = ubicacion;
     }
+
+    public String getFoto() { return foto; }
+
+    public void setFoto(String foto) { this.foto = foto; }
 }
