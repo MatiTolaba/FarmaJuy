@@ -112,7 +112,7 @@ public class DetalleProductoActivity extends AppCompatActivity {
         Farmacia farmacia = null;
         Double precioProducto;
         //ArrayList<DetalleProducto> detallesProductos = new ArrayList<>();
-        //String parametro = producto.getProducto_id().toString();
+        String parametro = producto.getProducto_id().toString();
 
         try {
 
@@ -146,7 +146,9 @@ public class DetalleProductoActivity extends AppCompatActivity {
                     " on " + UtilidadesConexion.TABLA_DETALLE_PRODUCTO+
                     "."+UtilidadesConexion.CAMPO_DETALLE_PRODUCTO_FARMACIA_ID+
                     " = "+ UtilidadesConexion.TABLA_FARMACIA +"."+ UtilidadesConexion.CAMPO_FARMACIA_ID+
-                    " WHERE "+ UtilidadesConexion.CAMPO_DETALLE_PRODUCTO_STOCK + " > 0", null);
+                    " WHERE "
+                    + UtilidadesConexion.CAMPO_DETALLE_PRODUCTO_PRODUCTO_ID + " = "+parametro+" AND "
+                    + UtilidadesConexion.CAMPO_DETALLE_PRODUCTO_STOCK + " > 0", null);
 
             //+ UtilidadesConexion.CAMPO_DETALLE_PRODUCTO_PRODUCTO_ID +
             //                    " = "+parametro+" AND "
