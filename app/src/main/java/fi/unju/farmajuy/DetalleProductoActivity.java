@@ -162,18 +162,19 @@ public class DetalleProductoActivity extends AppCompatActivity {
 //
 //                detallesProductos.add(detalleProducto);
                 farmacia = new Farmacia();
-                farmacia.setNombre(cursor.getString(0));
-                farmacia.setDireccion(cursor.getString(1));
-                farmacia.setHorario(cursor.getString(2));
-                farmacia.setTelefono(cursor.getString(3));
-                //farmacia.setUbicacion(cursor.getString(4));
-                farmacia.setFoto(cursor.getString(5));
+                farmacia.setFarmacia_id(cursor.getInt(0));
+                farmacia.setNombre(cursor.getString(1));
+                farmacia.setDireccion(cursor.getString(2));
+                farmacia.setHorario(cursor.getString(3));
+                farmacia.setTelefono(cursor.getString(4));
+                //farmacia.setUbicacion(cursor.getString(5));
+                farmacia.setFoto(cursor.getString(6));
 
                 listaFarmaciasConStock.add(farmacia);
 
                 System.out.println(listaFarmaciasConStock.size());
 
-                precioProducto = cursor.getDouble(6);
+                precioProducto = cursor.getDouble(7);
 
                 preciosProducto.add(precioProducto);
             }
