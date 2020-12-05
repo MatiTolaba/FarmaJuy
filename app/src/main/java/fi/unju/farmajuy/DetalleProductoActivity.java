@@ -106,32 +106,13 @@ public class DetalleProductoActivity extends AppCompatActivity {
     private void buscarFarmaciasConStock() {
         ConexionSQLiteHelper conexion = new ConexionSQLiteHelper(this, "bd_manager_medic_plus", null, 1);
         SQLiteDatabase db = conexion.getReadableDatabase();
-        // cambiar acá
 
-        //DetalleProducto detalleProducto = null;
         Farmacia farmacia = null;
         Double precioProducto;
-        //ArrayList<DetalleProducto> detallesProductos = new ArrayList<>();
+
         String parametro = producto.getProducto_id().toString();
 
         try {
-
-
-//            Cursor cursor = db.rawQuery("SELECT * FROM " + UtilidadesConexion.TABLA_DETALLE_PRODUCTO +
-//                    " WHERE "+ UtilidadesConexion.CAMPO_DETALLE_PRODUCTO_PRODUCTO_ID + " = "+parametro+" AND " +
-//                    UtilidadesConexion.CAMPO_DETALLE_PRODUCTO_STOCK + " > 0", null);
-//
-//            while (cursor.moveToNext()){
-//                detalleProducto = new DetalleProducto();
-//                detalleProducto.setDetalle_producto_id(cursor.getInt(0));
-//                detalleProducto.setFarmacia_id(cursor.getInt(1));
-//                detalleProducto.setProducto_id(cursor.getInt(2));
-//                detalleProducto.setPrecio(cursor.getDouble(3));
-//                //detalleProducto.setFecha_Vencimiento(cursor.getDate(4));
-//                detalleProducto.setStock(cursor.getInt(5));
-//
-//                detallesProductos.add(detalleProducto);
-//            }
 
             Cursor cursor = db.rawQuery("SELECT "+ UtilidadesConexion.TABLA_FARMACIA +"."+UtilidadesConexion.CAMPO_FARMACIA_ID +
                     ", "+ UtilidadesConexion.CAMPO_FARMACIA_NOMBRE+
@@ -150,19 +131,8 @@ public class DetalleProductoActivity extends AppCompatActivity {
                     + UtilidadesConexion.CAMPO_DETALLE_PRODUCTO_PRODUCTO_ID + " = "+parametro+" AND "
                     + UtilidadesConexion.CAMPO_DETALLE_PRODUCTO_STOCK + " > 0", null);
 
-            //+ UtilidadesConexion.CAMPO_DETALLE_PRODUCTO_PRODUCTO_ID +
-            //                    " = "+parametro+" AND "
-
             while (cursor.moveToNext()){
-//                detalleProducto = new DetalleProducto();
-//                detalleProducto.setDetalle_producto_id(cursor.getInt(0));
-//                detalleProducto.setFarmacia_id(cursor.getInt(1));
-//                detalleProducto.setProducto_id(cursor.getInt(2));
-//                detalleProducto.setPrecio(cursor.getDouble(3));
-//                //detalleProducto.setFecha_Vencimiento(cursor.getDate(4));
-//                detalleProducto.setStock(cursor.getInt(5));
-//
-//                detallesProductos.add(detalleProducto);
+
                 farmacia = new Farmacia();
                 farmacia.setFarmacia_id(cursor.getInt(0));
                 farmacia.setNombre(cursor.getString(1));
@@ -185,5 +155,4 @@ public class DetalleProductoActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(),"No hay resultados", Toast.LENGTH_SHORT).show();
         }
     }
-
 }
