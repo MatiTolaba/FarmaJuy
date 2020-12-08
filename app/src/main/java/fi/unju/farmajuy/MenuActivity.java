@@ -57,14 +57,6 @@ public class MenuActivity extends AppCompatActivity {
 
         valores = new ContentValues();
 
-//        valores.put(UtilidadesConexion.CAMPO_PRODUCTO_ID, 1);
-//        valores.put(UtilidadesConexion.CAMPO_PRODUCTO_NOMBRE, "Rivotril");
-//        valores.put(UtilidadesConexion.CAMPO_PRODUCTO_DROGA, "Clonazepam");
-//        valores.put(UtilidadesConexion.CAMPO_PRODUCTO_DESCRIPCION, "Ansiolítico");
-//        valores.put(UtilidadesConexion.CAMPO_PRODUCTO_PRESENTACION, "Capsulas de 10 mg");
-//        valores.put(UtilidadesConexion.CAMPO_PRODUCTO_FOTO, "https://images2.imgbox.com/80/ce/ZKCZRars_o.jpeg");
-//        valores.put(UtilidadesConexion.CAMPO_PRODUCTO_CATEGORIA_ID, 1);
-
         //PRODUCTOS
         //Medicamento
         valores.put(UtilidadesConexion.CAMPO_PRODUCTO_ID, 1);
@@ -230,7 +222,8 @@ public class MenuActivity extends AppCompatActivity {
         valores.put(UtilidadesConexion.CAMPO_FARMACIA_DIRECCION, "Av. Hipólito Yrigoyen 1116.");
         valores.put(UtilidadesConexion.CAMPO_FARMACIA_HORARIO, "Abierto las 24 horas.");
         valores.put(UtilidadesConexion.CAMPO_FARMACIA_TELEFONO, "0388 431-0877");
-        valores.put(UtilidadesConexion.CAMPO_FARMACIA_UBICACION, "-24.190258,-65.303592");
+        valores.put(UtilidadesConexion.CAMPO_FARMACIA_LATITUD, -24.190258);
+        valores.put(UtilidadesConexion.CAMPO_FARMACIA_LONGITUD, -65.303592);
         valores.put(UtilidadesConexion.CAMPO_FARMACIA_FOTO, "https://images2.imgbox.com/95/a6/XN6KUsIg_o.jpg");
 
         db.insert(UtilidadesConexion.TABLA_FARMACIA, UtilidadesConexion.CAMPO_FARMACIA_ID, valores);
@@ -240,7 +233,8 @@ public class MenuActivity extends AppCompatActivity {
         valores.put(UtilidadesConexion.CAMPO_FARMACIA_DIRECCION, "Gral. Lavalle 390");
         valores.put(UtilidadesConexion.CAMPO_FARMACIA_HORARIO, "Lunes a Sabado de 08:00 hs. a 12:00 hs.");
         valores.put(UtilidadesConexion.CAMPO_FARMACIA_TELEFONO, "0388 424-2416");
-        valores.put(UtilidadesConexion.CAMPO_FARMACIA_UBICACION, "-27.184317,-65.303034");
+        valores.put(UtilidadesConexion.CAMPO_FARMACIA_LATITUD, -27.184317);
+        valores.put(UtilidadesConexion.CAMPO_FARMACIA_LONGITUD, -65.303592);
         valores.put(UtilidadesConexion.CAMPO_FARMACIA_FOTO, "https://images2.imgbox.com/1d/5c/aQyyOtgN_o.png");
 
         db.insert(UtilidadesConexion.TABLA_FARMACIA, UtilidadesConexion.CAMPO_FARMACIA_ID, valores);
@@ -250,7 +244,8 @@ public class MenuActivity extends AppCompatActivity {
         valores.put(UtilidadesConexion.CAMPO_FARMACIA_DIRECCION, "Gral. Alvear 1062");
         valores.put(UtilidadesConexion.CAMPO_FARMACIA_HORARIO, "Lunes a Sabado de 08:00 hs. a 00:00 hs.");
         valores.put(UtilidadesConexion.CAMPO_FARMACIA_TELEFONO, "0388 423-1705");
-        valores.put(UtilidadesConexion.CAMPO_FARMACIA_UBICACION, "-24.184453,-65.307835");
+        valores.put(UtilidadesConexion.CAMPO_FARMACIA_LATITUD, -24.184453);
+        valores.put(UtilidadesConexion.CAMPO_FARMACIA_LONGITUD, -65.303592);
         valores.put(UtilidadesConexion.CAMPO_FARMACIA_FOTO, "https://images2.imgbox.com/10/23/kXxDMgqK_o.jpg");
 
         db.insert(UtilidadesConexion.TABLA_FARMACIA, UtilidadesConexion.CAMPO_FARMACIA_ID, valores);
@@ -260,7 +255,8 @@ public class MenuActivity extends AppCompatActivity {
         valores.put(UtilidadesConexion.CAMPO_FARMACIA_DIRECCION, "Gral. Güemes 1300");
         valores.put(UtilidadesConexion.CAMPO_FARMACIA_HORARIO, "Lunes a Viernes de 08:00 hs. a 00:00 hs.");
         valores.put(UtilidadesConexion.CAMPO_FARMACIA_TELEFONO, "0388 423-4050");
-        valores.put(UtilidadesConexion.CAMPO_FARMACIA_UBICACION, "-24.183356,-65.311080");
+        valores.put(UtilidadesConexion.CAMPO_FARMACIA_LATITUD, -24.183356);
+        valores.put(UtilidadesConexion.CAMPO_FARMACIA_LONGITUD, -65.303592);
         valores.put(UtilidadesConexion.CAMPO_FARMACIA_FOTO, "https://images2.imgbox.com/9f/87/nWg1Qaus_o.jpg");
 
         db.insert(UtilidadesConexion.TABLA_FARMACIA, UtilidadesConexion.CAMPO_FARMACIA_ID, valores);
@@ -270,7 +266,8 @@ public class MenuActivity extends AppCompatActivity {
         valores.put(UtilidadesConexion.CAMPO_FARMACIA_DIRECCION, "Gral. San Martín 244");
         valores.put(UtilidadesConexion.CAMPO_FARMACIA_HORARIO, "Lunes a Viernes de 08:00 hs. a 21:00 hs.");
         valores.put(UtilidadesConexion.CAMPO_FARMACIA_TELEFONO, "0388 422-8215");
-        valores.put(UtilidadesConexion.CAMPO_FARMACIA_UBICACION, "-24.186305,-65.2996710");
+        valores.put(UtilidadesConexion.CAMPO_FARMACIA_LATITUD, -24.186305);
+        valores.put(UtilidadesConexion.CAMPO_FARMACIA_LONGITUD, -65.303592);
         valores.put(UtilidadesConexion.CAMPO_FARMACIA_FOTO, "https://images2.imgbox.com/f9/7b/hRWZpMyP_o.jpg");
 
         db.insert(UtilidadesConexion.TABLA_FARMACIA, UtilidadesConexion.CAMPO_FARMACIA_ID, valores);

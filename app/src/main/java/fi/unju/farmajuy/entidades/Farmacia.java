@@ -10,19 +10,21 @@ public class Farmacia implements Serializable {
     private String direccion;
     private String horario;
     private String telefono;
-    private Location ubicacion;
+    private Double latitud;
+    private Double longitud;
     private String foto;
 
     public Farmacia() {
     }
 
-    public Farmacia(Integer farmacia_id, String nombre, String direccion, String horario, String telefono, Location ubicacion, String foto) {
+    public Farmacia(Integer farmacia_id, String nombre, String direccion, String horario, String telefono, Double latitud, Double longitud, String foto) {
         this.farmacia_id = farmacia_id;
         this.nombre = nombre;
         this.direccion = direccion;
         this.horario = horario;
         this.telefono = telefono;
-        this.ubicacion = ubicacion;
+        this.latitud = latitud;
+        this.longitud = longitud;
         this.foto = foto;
     }
 
@@ -66,13 +68,13 @@ public class Farmacia implements Serializable {
         this.telefono = telefono;
     }
 
-    public Location getUbicacion() {
-        return ubicacion;
-    }
+    public Double getLatitud() { return latitud; }
 
-    public void setUbicacion(Location ubicacion) {
-        this.ubicacion = ubicacion;
-    }
+    public void setLatitud(Double latitud) { this.latitud = latitud; }
+
+    public Double getLongitud() { return longitud; }
+
+    public void setLongitud(Double longitud) { this.longitud = longitud; }
 
     public String getFoto() { return foto; }
 

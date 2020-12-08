@@ -119,7 +119,8 @@ public class DetalleProductoActivity extends AppCompatActivity {
                     ", "+ UtilidadesConexion.CAMPO_FARMACIA_DIRECCION+
                     ", "+ UtilidadesConexion.CAMPO_FARMACIA_HORARIO+
                     ", "+ UtilidadesConexion.CAMPO_FARMACIA_TELEFONO+
-                    ", "+ UtilidadesConexion.CAMPO_FARMACIA_UBICACION+
+                    ", "+ UtilidadesConexion.CAMPO_FARMACIA_LATITUD+
+                    ", "+ UtilidadesConexion.CAMPO_FARMACIA_LONGITUD+
                     ", "+ UtilidadesConexion.CAMPO_FARMACIA_FOTO+
                     ", "+ UtilidadesConexion.CAMPO_DETALLE_PRODUCTO_PRECIO+
                     " FROM " + UtilidadesConexion.TABLA_FARMACIA +
@@ -139,14 +140,15 @@ public class DetalleProductoActivity extends AppCompatActivity {
                 farmacia.setDireccion(cursor.getString(2));
                 farmacia.setHorario(cursor.getString(3));
                 farmacia.setTelefono(cursor.getString(4));
-                //farmacia.setUbicacion(cursor.getString(5));
-                farmacia.setFoto(cursor.getString(6));
+                farmacia.setLatitud(cursor.getDouble(5));
+                farmacia.setLongitud(cursor.getDouble(6));
+                farmacia.setFoto(cursor.getString(7));
 
                 listaFarmaciasConStock.add(farmacia);
 
                 System.out.println(listaFarmaciasConStock.size());
 
-                precioProducto = cursor.getDouble(7);
+                precioProducto = cursor.getDouble(8);
 
                 preciosProducto.add(precioProducto);
             }

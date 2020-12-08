@@ -35,13 +35,14 @@ public class UtilidadesConexion {
     public static final String CAMPO_FARMACIA_DIRECCION = "farmacia_direccion";
     public static final String CAMPO_FARMACIA_HORARIO = "farmacia_horario";
     public static final String CAMPO_FARMACIA_TELEFONO = "farmacia_telefono";
-    public static final String CAMPO_FARMACIA_UBICACION = "farmacia_ubicacion";
+    public static final String CAMPO_FARMACIA_LATITUD = "farmacia_latitud";
+    public static final String CAMPO_FARMACIA_LONGITUD = "farmacia_longitud";
     public static final String CAMPO_FARMACIA_FOTO = "farmacia_foto";
 
     public static final String CREAR_TABLA_FARMACIA = "CREATE TABLE " +TABLA_FARMACIA+  " (" +
             CAMPO_FARMACIA_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +CAMPO_FARMACIA_NOMBRE + " TEXT, " +
             CAMPO_FARMACIA_DIRECCION +" TEXT," + CAMPO_FARMACIA_HORARIO + " TEXT," + CAMPO_FARMACIA_TELEFONO +
-            " TEXT, " + CAMPO_FARMACIA_UBICACION + " TEXT, " + CAMPO_FARMACIA_FOTO + " TEXT )";
+            " TEXT, " + CAMPO_FARMACIA_LATITUD + " DOUBLE, " + CAMPO_FARMACIA_LONGITUD + " DOUBLE, " + CAMPO_FARMACIA_FOTO + " TEXT )";
 
     //Constantes campos de tabla detalle producto
 
