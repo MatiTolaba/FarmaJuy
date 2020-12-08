@@ -24,7 +24,6 @@ public class AdaptadorDetalleProducto extends RecyclerView.Adapter<AdaptadorDeta
     Context miContexto;
     ArrayList<Farmacia> listaFarmaciasConStock;
     ArrayList<Double> preciosProducto;
-    //Double precioProducto;
 
     public AdaptadorDetalleProducto(Context miContexto, ArrayList<Farmacia> listaFarmaciasConStock, ArrayList<Double> preciosProducto) {
         this.miContexto = miContexto;
