@@ -1,9 +1,13 @@
 package fi.unju.farmajuy;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
+import android.Manifest;
 import android.content.ContentValues;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
@@ -22,11 +26,24 @@ public class MenuActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setIcon(R.mipmap.ic_launcher);
 
+        //pedimos ubicacion al usuario, directamente al iniciar la aplicacion
+        obtenerLocalizacion();
         // Registramos productos al iniciar esta pantalla, solo como ejemplo
-        RegistrarProductos();
+        registrarProductos();
     }
 
-    private void RegistrarProductos() {
+    //metodo permiso para acceder a la localizacion. Permisos para la app acceda a la ubicacion
+    private void obtenerLocalizacion() {
+        int permiso = ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION);
+        if(permiso == PackageManager.PERMISSION_DENIED){
+            if(ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.ACCESS_FINE_LOCATION)){
+            }else{
+                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1);
+            }
+        }
+    }
+
+    private void registrarProductos() {
         ConexionSQLiteHelper conexion = new ConexionSQLiteHelper(this, "bd_manager_medic_plus", null, 1);
         SQLiteDatabase db = conexion.getWritableDatabase();
         ContentValues valores = new ContentValues();
@@ -233,7 +250,7 @@ public class MenuActivity extends AppCompatActivity {
         valores.put(UtilidadesConexion.CAMPO_FARMACIA_DIRECCION, "Gral. Lavalle 390");
         valores.put(UtilidadesConexion.CAMPO_FARMACIA_HORARIO, "Lunes a Sabado de 08:00 hs. a 12:00 hs.");
         valores.put(UtilidadesConexion.CAMPO_FARMACIA_TELEFONO, "0388 424-2416");
-        valores.put(UtilidadesConexion.CAMPO_FARMACIA_LATITUD, -27.184317);
+        valores.put(UtilidadesConexion.CAMPO_FARMACIA_LATITUD, -24.184317);
         valores.put(UtilidadesConexion.CAMPO_FARMACIA_LONGITUD, -65.303592);
         valores.put(UtilidadesConexion.CAMPO_FARMACIA_FOTO, "https://images2.imgbox.com/1d/5c/aQyyOtgN_o.png");
 

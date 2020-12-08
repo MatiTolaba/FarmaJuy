@@ -60,6 +60,16 @@
                     android:paddingRight="10dp"
                     android:paddingBottom="5dp"
                     android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/textViewDistancia"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="5dp"
+                    android:text="TextView" />
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
