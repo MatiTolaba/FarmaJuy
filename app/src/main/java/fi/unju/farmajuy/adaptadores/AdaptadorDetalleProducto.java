@@ -34,7 +34,7 @@ public class AdaptadorDetalleProducto extends RecyclerView.Adapter<AdaptadorDeta
     @NonNull
     @Override
     public AdaptadorDetalleProducto.ViewHolderDetalleProducto onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_farmacia,null,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_farmacia, parent,false);
         return new AdaptadorDetalleProducto.ViewHolderDetalleProducto(view);
     }
 

@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="10dp"
+    android:layout_margin="8dp"
     android:orientation="vertical">
 
     <TextView
@@ -11,11 +11,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:text="@string/las_siguientes_farmacias_cercanas_poseen_disponibilidad_del_medicamento_que_ha_buscado"/>
+        android:text="@string/las_siguientes_farmacias_cercanas_poseen_disponibilidad_del_medicamento_que_ha_buscado" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewFarmaciasConStock"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="match_parent" />
 
 </LinearLayout>
