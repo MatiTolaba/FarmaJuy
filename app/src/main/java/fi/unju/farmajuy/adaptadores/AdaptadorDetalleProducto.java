@@ -52,7 +52,7 @@ public class AdaptadorDetalleProducto extends RecyclerView.Adapter<AdaptadorDeta
 
         Double precioProducto = preciosProducto.get(position);
 
-        holder.precioProducto.setText(precioProducto.toString());
+        holder.precioProducto.setText("$ "+precioProducto.toString());
 
     }
 
