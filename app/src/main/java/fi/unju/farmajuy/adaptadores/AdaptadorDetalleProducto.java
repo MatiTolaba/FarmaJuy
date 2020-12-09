@@ -77,17 +77,14 @@ public class AdaptadorDetalleProducto extends RecyclerView.Adapter<AdaptadorDeta
 
             public void onLocationChanged(Location location) {
                 // Called when a new location is found by the network location provider.
-                //miUbicacion.set(location);
-                //System.out.println(miUbicacion.getLatitude());
                 float results[] = new float[10];
                 Location.distanceBetween(location.getLatitude(), location.getLongitude(), farmacia.getLatitud(), farmacia.getLongitud(), results);
-                //System.out.println(results[0]);
                 if (results[0] >= 1000){
                     Double resultadoKilometros = Double.valueOf(results[0] / 1000);
-                    holder.distanciaFarmacia.setText(resultadoKilometros.toString()+" km.");
+                    holder.distanciaFarmacia.setText(String.format("%.1f", resultadoKilometros)+" km.");
                 } else {
                     Double resultadoKilometros = Double.valueOf(results[0]);
-                    holder.distanciaFarmacia.setText(resultadoKilometros.toString()+" m.");
+                    holder.distanciaFarmacia.setText(String.format("%.1f", resultadoKilometros)+" m.");
                 }
             }
 
