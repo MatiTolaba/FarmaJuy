@@ -21,7 +21,7 @@ public class MapaFarmaciaActivity extends FragmentActivity implements OnMapReady
         setContentView(R.layout.activity_mapa_farmacia);
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.map);
+                .findFragmentById(R.id.mapFarmacia);
         mapFragment.getMapAsync(this);
     }
 
