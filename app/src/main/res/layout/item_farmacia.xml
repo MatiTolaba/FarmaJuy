@@ -23,19 +23,18 @@
 
             <ImageView
                 android:id="@+id/imageViewFarmacia"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
                 android:layout_marginEnd="4dp"
                 android:layout_marginRight="4dp"
-                android:layout_weight="1"
                 tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
                 android:layout_marginLeft="4dp"
-                android:layout_weight="1"
                 android:orientation="vertical"
                 android:padding="4dp">
 
@@ -70,6 +69,28 @@
                     android:paddingRight="10dp"
                     android:paddingBottom="5dp"
                     android:text="TextView" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/buttonDetalleFarmacia"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Detalles"
+                        android:textSize="12sp" />
+
+                    <Button
+                        android:id="@+id/buttonMapaFarmacia"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Ver Mapa"
+                        android:textSize="12sp" />
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
