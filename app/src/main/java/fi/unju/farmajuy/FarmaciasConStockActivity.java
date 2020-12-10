@@ -2,11 +2,14 @@ package fi.unju.farmajuy;
 
 import android.Manifest;
 import android.content.Context;
+import android.content.Intent;
 import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
@@ -74,5 +77,21 @@ public class FarmaciasConStockActivity extends AppCompatActivity {
             recyclerViewFarmacias.setAdapter(adaptadorDetalleProducto);
         }
 
+    }
+
+    public void onClick(View view){
+        switch (view.getId()){
+            case R.id.buttonMapaFarmacia:
+
+                Intent mapaIntent = new Intent(FarmaciasConStockActivity.this, MapaFarmaciaActivity.class);
+//                Bundle productoActivityBundle = new Bundle();
+//
+//                productoActivityBundle.putSerializable("coordenadas", coordenadas);
+//                productoActivityIntent.putExtras(productoActivityBundle);
+
+                startActivity(mapaIntent);
+
+            break;
+        }
     }
 }
