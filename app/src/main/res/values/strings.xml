@@ -17,4 +17,5 @@
     <string name="ingrese_nombre_producto_o_droga">Ingrese Nombre del Producto o Droga</string>
     <string name="button_buscar">Buscar</string>
     <string name="las_siguientes_farmacias_cercanas_poseen_disponibilidad_del_medicamento_que_ha_buscado">Las siguientes farmacias cercanas poseen disponibilidad del medicamento que ha buscado:</string>
+    <string name="title_activity_mapa_farmacia">Map</string>
 </resources>
