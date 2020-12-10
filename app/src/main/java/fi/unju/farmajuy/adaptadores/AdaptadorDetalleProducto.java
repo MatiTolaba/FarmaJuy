@@ -86,13 +86,14 @@ public class AdaptadorDetalleProducto extends RecyclerView.Adapter<AdaptadorDeta
                     Double resultadoKilometros = Double.valueOf(results[0]);
                     holder.distanciaFarmacia.setText(String.format("%.1f", resultadoKilometros)+" m.");
                 }
+                locationManager.removeUpdates(this);
             }
 
-            public void onStatusChanged(String provider, int status, Bundle extras) {}
-
-            public void onProviderEnabled(String provider) {}
-
-            public void onProviderDisabled(String provider) {}
+//            public void onStatusChanged(String provider, int status, Bundle extras) {}
+//
+//            public void onProviderEnabled(String provider) {}
+//
+//            public void onProviderDisabled(String provider) {}
         };
 
         int permiso = ContextCompat.checkSelfPermission( miContexto, Manifest.permission.ACCESS_FINE_LOCATION);
