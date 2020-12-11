@@ -9,7 +9,6 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
@@ -19,7 +18,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.Collections;
 
-import fi.unju.farmajuy.adaptadores.AdaptadorDetalleProducto;
+import fi.unju.farmajuy.adaptadores.AdaptadorFarmaciaConStock;
 import fi.unju.farmajuy.entidades.Farmacia;
 import fi.unju.farmajuy.utilidades.OrdenarDistancias;
 
@@ -73,25 +72,25 @@ public class FarmaciasConStockActivity extends AppCompatActivity {
             recyclerViewFarmacias = (RecyclerView) findViewById(R.id.recyclerViewFarmaciasConStock);
             recyclerViewFarmacias.setLayoutManager( new LinearLayoutManager(this));
 
-            AdaptadorDetalleProducto adaptadorDetalleProducto = new AdaptadorDetalleProducto(this, farmaciasConStock, preciosProducto);
-            recyclerViewFarmacias.setAdapter(adaptadorDetalleProducto);
+            AdaptadorFarmaciaConStock adaptadorFarmaciaConStock = new AdaptadorFarmaciaConStock(this, farmaciasConStock, preciosProducto);
+            recyclerViewFarmacias.setAdapter(adaptadorFarmaciaConStock);
         }
 
     }
 
-    public void onClick(View view){
-        switch (view.getId()){
-            case R.id.buttonMapaFarmacia:
-
-                Intent mapaIntent = new Intent(FarmaciasConStockActivity.this, MapaFarmaciaActivity.class);
+//    public void onClick(View view){
+//        switch (view.getId()){
+//            case R.id.buttonMapaFarmacia:
+//
+//                Intent mapaIntent = new Intent(FarmaciasConStockActivity.this, MapaFarmaciaActivity.class);
 //                Bundle productoActivityBundle = new Bundle();
 //
 //                productoActivityBundle.putSerializable("coordenadas", coordenadas);
 //                productoActivityIntent.putExtras(productoActivityBundle);
-
-                startActivity(mapaIntent);
-
-            break;
-        }
-    }
+//
+//                startActivity(mapaIntent);
+//
+//            break;
+//        }
+//    }
 }

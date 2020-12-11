@@ -35,6 +35,7 @@
         <uses-library
             android:name="org.apache.http.legacy"
             android:required="false" />
+        <activity android:name=".DetalleFarmaciaActivity"/>
         <activity
             android:name=".MapaFarmaciaActivity"
             android:label="@string/title_activity_mapa_farmacia"></activity>
