@@ -6,36 +6,66 @@
     android:layout_height="match_parent"
     tools:context=".BuscarProductoActivity">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="136dp"
-        android:layout_marginEnd="8dp"
+    <ImageView
+        android:id="@+id/imageViewFarmaceutica"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="56dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/inputTextProductoNombreDroga"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/ingrese_nombre_producto_o_droga"
-            android:inputType="text"
-            />
-    </com.google.android.material.textfield.TextInputLayout>
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/farmaceutica"
+        tools:srcCompat="@drawable/farmaceutica" />
 
     <Button
         android:id="@+id/btnBuscarProducto"
         android:layout_width="227dp"
         android:layout_height="62dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="8dp"
         android:onClick="onClick"
         android:text="BUSCAR"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+        app:layout_constraintVertical_bias="0.038"
         tools:text="Buscar" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelInfoUsuario">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputTextProductoNombreDroga"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/ingrese_nombre_producto"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/labelInfoUsuario"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/info_usuario"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewFarmaceutica" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
