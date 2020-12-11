@@ -2,7 +2,9 @@ package fi.unju.farmajuy;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ContentValues;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -12,9 +14,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.bumptech.glide.util.Util;
 import com.google.android.material.textfield.TextInputLayout;
 
 import java.util.regex.Pattern;
+
+import fi.unju.farmajuy.utilidades.UtilidadesConexion;
 
 public class RegistroClienteActivity extends AppCompatActivity {
 
@@ -212,7 +217,31 @@ public class RegistroClienteActivity extends AppCompatActivity {
 
         if (a && b && c && d) {
             // OK, se pasa a la siguiente acción
+
+
+            ConexionSQLiteHelper conexion = new ConexionSQLiteHelper(this,"bd_manager_medic_plus",null, 1);
+            //Abrimos la BD en modo lectura y escritura
+            SQLiteDatabase db = conexion.getReadableDatabase();
+
+            ContentValues registro = new ContentValues();
+            registro.put(UtilidadesConexion.CAMPO_CLIENTE_EMAIL, correo);
+            registro.put(UtilidadesConexion.CAMPO_CLIENTE_NOMBRE, nombre);
+            registro.put(UtilidadesConexion.CAMPO_CLIENTE_TELEFONO, telefono);
+            registro.put(UtilidadesConexion.CAMPO_CLIENTE_CONTRASENIA, contraseña);
+
+            db.insert(UtilidadesConexion.TABLA_CLIENTE,null, registro);
+
             Toast.makeText(this, "Cliente Registrado!", Toast.LENGTH_LONG).show();
+
+            db.close();
+
+            /*
+            tilNombre.getEditText().setText("");
+            tilTelefono.getEditText().setText("");
+            tilCorreo.getEditText().setText("");
+            tilContraseña.getEditText().setText("");
+            tilContraseña2.getEditText().setText("");
+             */
         }
 
     }

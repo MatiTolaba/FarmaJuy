@@ -20,6 +20,7 @@ public class ConexionSQLiteHelper extends SQLiteOpenHelper {
         db.execSQL(UtilidadesConexion.CREAR_TABLA_PRODUCTO);
         db.execSQL(UtilidadesConexion.CREAR_TABLA_FARMACIA);
         db.execSQL(UtilidadesConexion.CREAR_TABLA_DETALLE_PRODUCTO);
+        db.execSQL(UtilidadesConexion.CREAR_TABLA_CLIENTE);
     }
 
     @Override
@@ -28,6 +29,7 @@ public class ConexionSQLiteHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + UtilidadesConexion.TABLA_FARMACIA);
         db.execSQL("DROP TABLE IF EXISTS " + UtilidadesConexion.TABLA_PRODUCTO);
         db.execSQL("DROP TABLE IF EXISTS " + UtilidadesConexion.TABLA_CATEGORIA);
+        db.execSQL("DROP TABLE IF EXISTS " + UtilidadesConexion.TABLA_CLIENTE);
         onCreate(db);
     }
 }

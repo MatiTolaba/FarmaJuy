@@ -58,4 +58,17 @@ public class UtilidadesConexion {
             CAMPO_DETALLE_PRODUCTO_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + CAMPO_DETALLE_PRODUCTO_FARMACIA_ID + " INTEGER, " +
             CAMPO_DETALLE_PRODUCTO_PRODUCTO_ID +" INTEGER," + CAMPO_DETALLE_PRODUCTO_PRECIO + " DOUBLE," + CAMPO_DETALLE_PRODUCTO_FECHA_VENCIMIENTO +
             " DATE, " + CAMPO_DETALLE_PRODUCTO_STOCK + " INTEGER )";
+
+
+    //Constantes campos de tabla clientes
+    public static final String TABLA_CLIENTE = "clientes";
+    public static final String CAMPO_CLIENTE_EMAIL = "cliente_email";
+    public static final String CAMPO_CLIENTE_NOMBRE = "cliente_nombre";
+    public static final String CAMPO_CLIENTE_TELEFONO = "cliente_telefono";
+    public static final String CAMPO_CLIENTE_CONTRASENIA = "cliente_contraseña";
+
+    public static final String CREAR_TABLA_CLIENTE = "CREATE TABLE " +TABLA_CLIENTE+  " (" +
+            CAMPO_CLIENTE_EMAIL + " TEXT PRIMARY KEY,"  +CAMPO_CLIENTE_NOMBRE + " TEXT, " +
+            CAMPO_CLIENTE_TELEFONO +" INTEGER," +  CAMPO_CLIENTE_CONTRASENIA +
+            " TEXT )";
 }
