@@ -20,7 +20,6 @@ import com.google.android.material.textfield.TextInputLayout;
 import java.util.ArrayList;
 
 import fi.unju.farmajuy.entidades.Cliente;
-import fi.unju.farmajuy.entidades.Producto;
 import fi.unju.farmajuy.utilidades.UtilidadesConexion;
 
 
