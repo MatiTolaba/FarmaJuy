@@ -47,6 +47,8 @@ public class AdaptadorProducto extends RecyclerView.Adapter<AdaptadorProducto.Vi
                 .into(holder.imagenProducto);
 
         holder.nombreProducto.setText(producto.getNombre());
+        holder.drogaProducto.setText(producto.getDroga());
+        holder.presentacionProducto.setText(producto.getPresentacion());
 
     }
 
@@ -58,13 +60,15 @@ public class AdaptadorProducto extends RecyclerView.Adapter<AdaptadorProducto.Vi
     public class ViewHolderProducto extends RecyclerView.ViewHolder implements View.OnClickListener{
 
         ImageView imagenProducto;
-        TextView nombreProducto;
+        TextView nombreProducto, drogaProducto, presentacionProducto;
 
         public ViewHolderProducto(@NonNull View itemView) {
             super(itemView);
 
             imagenProducto = itemView.findViewById(R.id.imageViewItemProducto);
             nombreProducto = itemView.findViewById(R.id.textViewNombreItemProducto);
+            drogaProducto = itemView.findViewById(R.id.textViewDrogaProducto);
+            presentacionProducto = itemView.findViewById(R.id.textViewPresentacionProducto);
             itemView.setOnClickListener(this);
         }
 

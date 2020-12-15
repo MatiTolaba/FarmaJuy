@@ -22,7 +22,7 @@ public class MapsSitiosActivity extends FragmentActivity implements OnMapReadyCa
         setContentView(R.layout.activity_maps_sitios);
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.map);
+                .findFragmentById(R.id.mapFarmacia);
         mapFragment.getMapAsync(this);
     }
 

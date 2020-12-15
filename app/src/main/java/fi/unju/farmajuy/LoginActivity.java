@@ -70,7 +70,6 @@ public class LoginActivity extends AppCompatActivity {
         //Coloco el icono en el actionBar
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setIcon(R.mipmap.ic_launcher);
-
     }
 
     public void Aceptar(View view){

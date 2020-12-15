@@ -30,7 +30,7 @@ public class MapsMiUbicacionActivity extends FragmentActivity implements OnMapRe
         setContentView(R.layout.activity_maps_mi_ubicacion);
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.map);
+                .findFragmentById(R.id.mapFarmacia);
         mapFragment.getMapAsync(this);
 
         getLocalizacion();
