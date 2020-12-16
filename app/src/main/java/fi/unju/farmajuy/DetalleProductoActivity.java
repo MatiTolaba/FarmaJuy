@@ -25,8 +25,8 @@ public class DetalleProductoActivity extends AppCompatActivity {
     TextView nombreProducto, drogaProducto, presentacionProducto, descripcionProducto, categoriaProducto;
     ImageView imagenProducto;
 
-    ArrayList<Farmacia> listaFarmaciasConStock = new ArrayList<>();
-    ArrayList<Double> preciosProducto = new ArrayList<>();
+    ArrayList<Farmacia> listaFarmaciasConStock;
+    ArrayList<Double> preciosProducto;
 
     Producto producto;
     //Double precioProducto;
@@ -107,6 +107,8 @@ public class DetalleProductoActivity extends AppCompatActivity {
         ConexionSQLiteHelper conexion = new ConexionSQLiteHelper(this, "bd_manager_medic_plus", null, 1);
         SQLiteDatabase db = conexion.getReadableDatabase();
 
+        listaFarmaciasConStock = new ArrayList<>();
+        preciosProducto = new ArrayList<>();
         Farmacia farmacia = null;
         Double precioProducto;
 
