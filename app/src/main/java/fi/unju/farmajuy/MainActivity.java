@@ -18,8 +18,8 @@ public class MainActivity extends AppCompatActivity {
         getSplash();
 
         //Coloco el icono en el actionBar
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setIcon(R.mipmap.ic_launcher);
+        //getSupportActionBar().setDisplayShowHomeEnabled(true);
+        //getSupportActionBar().setIcon(R.mipmap.ic_launcher);
     }
 
     private void getSplash() {
