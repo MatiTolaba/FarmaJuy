@@ -6,14 +6,12 @@ import android.content.Intent;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
@@ -25,15 +23,9 @@ import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
-import fi.unju.farmajuy.BuscarProductoActivity;
 import fi.unju.farmajuy.DetalleFarmaciaActivity;
-import fi.unju.farmajuy.DetalleProductoActivity;
-import fi.unju.farmajuy.MapaFarmaciaActivity;
-import fi.unju.farmajuy.ProductoActivity;
 import fi.unju.farmajuy.R;
-
 import fi.unju.farmajuy.entidades.Farmacia;
-import fi.unju.farmajuy.utilidades.UtilidadesMapa;
 
 public class AdaptadorFarmaciaConStock extends RecyclerView.Adapter<AdaptadorFarmaciaConStock.ViewHolderFarmaciaConStock>{
 
