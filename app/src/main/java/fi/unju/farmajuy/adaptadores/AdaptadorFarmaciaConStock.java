@@ -161,14 +161,14 @@ public class AdaptadorFarmaciaConStock extends RecyclerView.Adapter<AdaptadorFar
         public void onClick(View view) {
             switch (view.getId()){
                 case R.id.buttonMapaFarmacia:
-                    Intent mapaFarmaciasIntent = new Intent(miContexto, MapaFarmaciaActivity.class);
-                    Bundle mapaFarmaciasBundle = new Bundle();
-
-                    //obtenerUbicacion();
-
-                    mapaFarmaciasIntent.putExtras(mapaFarmaciasBundle);
-                    mapaFarmaciasIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    miContexto.startActivity(mapaFarmaciasIntent);
+//                    Intent mapaFarmaciasIntent = new Intent(miContexto, MapaFarmaciaActivity.class);
+//                    Bundle mapaFarmaciasBundle = new Bundle();
+//
+//                    obtenerUbicacion();
+//
+//                    mapaFarmaciasIntent.putExtras(mapaFarmaciasBundle);
+//                    mapaFarmaciasIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//                    miContexto.startActivity(mapaFarmaciasIntent);
                     break;
 
                 case R.id.buttonDetalleFarmacia:
