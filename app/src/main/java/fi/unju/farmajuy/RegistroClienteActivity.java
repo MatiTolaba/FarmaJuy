@@ -235,13 +235,15 @@ public class RegistroClienteActivity extends AppCompatActivity {
 
             db.close();
 
-            /*
+
             tilNombre.getEditText().setText("");
             tilTelefono.getEditText().setText("");
             tilCorreo.getEditText().setText("");
             tilContraseña.getEditText().setText("");
             tilContraseña2.getEditText().setText("");
-             */
+
+            Intent loginActivityIntent = new Intent(RegistroClienteActivity.this, LoginActivity.class);
+            startActivity(loginActivityIntent);
         }
 
     }
