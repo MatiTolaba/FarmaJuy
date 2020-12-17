@@ -22,4 +22,9 @@ public class MenuFarmaciaActivity extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), MapsMiUbicacionActivity.class);
         startActivity(intent);
     }
+
+    public void CargarProducto(View view){
+        Intent intent = new Intent(getApplicationContext(), activity_cargar_producto.class);
+        startActivity(intent);
+    }
 }

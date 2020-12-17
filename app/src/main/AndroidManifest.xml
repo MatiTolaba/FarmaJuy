@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="fi.unju.farmajuy">
-
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -17,7 +16,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FarmaJuy">
-
+        <activity android:name=".activity_cargar_producto"></activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -32,13 +31,15 @@
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+
         <uses-library
             android:name="org.apache.http.legacy"
             android:required="false" />
-        <activity android:name=".DetalleFarmaciaActivity"/>
+
+        <activity android:name=".DetalleFarmaciaActivity" />
         <activity
             android:name=".MapaFarmaciaActivity"
-            android:label="@string/title_activity_mapa_farmacia"></activity>
+            android:label="@string/title_activity_mapa_farmacia" />
         <activity android:name=".MenuFarmaciaActivity" />
         <activity android:name=".DetalleProductoActivity" />
         <activity android:name=".ProductoActivity" />
