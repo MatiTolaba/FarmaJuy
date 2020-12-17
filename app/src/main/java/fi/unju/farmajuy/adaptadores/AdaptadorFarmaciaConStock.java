@@ -7,7 +7,6 @@ import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -38,9 +37,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import fi.unju.farmajuy.DetalleFarmaciaActivity;
-import fi.unju.farmajuy.MapaFarmaciaActivity;
 import fi.unju.farmajuy.R;
-
 import fi.unju.farmajuy.entidades.Farmacia;
 import fi.unju.farmajuy.utilidades.UtilidadesMapa;
 
