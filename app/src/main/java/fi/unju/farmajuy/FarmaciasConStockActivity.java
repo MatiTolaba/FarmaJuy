@@ -8,8 +8,11 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -21,17 +24,17 @@ import java.util.Collections;
 import fi.unju.farmajuy.adaptadores.AdaptadorFarmaciaConStock;
 import fi.unju.farmajuy.entidades.Farmacia;
 import fi.unju.farmajuy.utilidades.OrdenarDistancias;
+import fi.unju.farmajuy.utilidades.UtilidadesMapa;
 
-public class FarmaciasConStockActivity extends AppCompatActivity {
+public class FarmaciasConStockActivity extends AppCompatActivity implements LocationListener {
 
     RecyclerView recyclerViewFarmacias;
     ArrayList<Farmacia> farmaciasConStock;
-
     ArrayList<Double> preciosProducto;
 
-    Location miUbicacion;
-    public Criteria criteria;
-    public String bestProvider;
+    public Criteria criterio;
+    public String mejorProveedor;
+    private LocationManager locationManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,27 +50,25 @@ public class FarmaciasConStockActivity extends AppCompatActivity {
             preciosProducto = (ArrayList<Double>) activityBundle.getSerializable("preciosProducto");
 
             // Acquire a reference to the system Location Manager
-            LocationManager locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
-            criteria = new Criteria();
-            bestProvider = String.valueOf(locationManager.getBestProvider(criteria, true)).toString();
+            locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
+            criterio = new Criteria();
+            mejorProveedor = String.valueOf(locationManager.getBestProvider(criterio, true)).toString();
 
-            // Define a listener that responds to location updates
-            LocationListener locationListener = new LocationListener() {
+            int permiso = ContextCompat.checkSelfPermission( this, Manifest.permission.ACCESS_FINE_LOCATION);
 
-                public void onLocationChanged(Location location) {
-                    // Called when a new location is found by the network location provider.
-                    int permiso = ContextCompat.checkSelfPermission( FarmaciasConStockActivity.this, Manifest.permission.ACCESS_FINE_LOCATION);
-                    locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, this);
+            //You can still do this if you like, you might get lucky:
+            Location location = locationManager.getLastKnownLocation(mejorProveedor);
+            if (location != null) {
 
-                    //miUbicacion.set(location);
-                    System.out.println(location.getLongitude());
-//                    System.out.println(miUbicacion.getLongitude());
+                Collections.sort(farmaciasConStock, new OrdenarDistancias(location));
 
-                    Collections.sort(farmaciasConStock, new OrdenarDistancias(location));
-
-                    locationManager.removeUpdates(this);
-                }
-            };
+                locationManager.removeUpdates(this);
+            }
+            else{
+                //This is what you need:
+                //Register the listener with the Location Manager to receive location updates
+                locationManager.requestLocationUpdates(mejorProveedor, 1000, 0, this);
+            }
 
             recyclerViewFarmacias = (RecyclerView) findViewById(R.id.recyclerViewFarmaciasConStock);
             recyclerViewFarmacias.setLayoutManager( new LinearLayoutManager(this));
@@ -75,22 +76,17 @@ public class FarmaciasConStockActivity extends AppCompatActivity {
             AdaptadorFarmaciaConStock adaptadorFarmaciaConStock = new AdaptadorFarmaciaConStock(this, farmaciasConStock, preciosProducto);
             recyclerViewFarmacias.setAdapter(adaptadorFarmaciaConStock);
         }
-
     }
 
-//    public void onClick(View view){
-//        switch (view.getId()){
-//            case R.id.buttonMapaFarmacia:
-//
-//                Intent mapaIntent = new Intent(FarmaciasConStockActivity.this, MapaFarmaciaActivity.class);
-//                Bundle productoActivityBundle = new Bundle();
-//
-//                productoActivityBundle.putSerializable("coordenadas", coordenadas);
-//                productoActivityIntent.putExtras(productoActivityBundle);
-//
-//                startActivity(mapaIntent);
-//
-//            break;
-//        }
-//    }
+    @Override
+    public void onLocationChanged(@NonNull Location location) {
+        //Called when a new location is found by the network location provider.
+
+        //Hey, a non null location! Sweet!
+
+        //remove location callback:
+        locationManager.removeUpdates(this);
+
+        Collections.sort(farmaciasConStock, new OrdenarDistancias(location));
+    }
 }
